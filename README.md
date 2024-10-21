@@ -261,3 +261,40 @@ int main()
     destruct aa,bb,cc,dd;
 }
 ```
+
+OUTPUT:-
+
+12
+
+![EX 12 JPG](https://github.com/user-attachments/assets/d6714061-72cf-4b60-9d7a-4356f57e8e42)
+
+12a
+
+![Ex 12a JPG](https://github.com/user-attachments/assets/defbd398-fea9-4d97-b651-2b775647939d)
+
+12b
+
+![Ex 12b JPG](https://github.com/user-attachments/assets/63a8c3c2-1a3b-4d4f-a4d1-d04cea56f507)
+
+12c
+
+![Ex 12c JPG](https://github.com/user-attachments/assets/e0824c30-eb52-4238-8c8d-acc597abf6f9)
+
+12d
+
+![Ex 12 d JPG](https://github.com/user-attachments/assets/569f473e-2b88-4afc-98d1-e58174d44370)
+
+12e
+
+
+![EX 12e JPG](https://github.com/user-attachments/assets/cb6d7310-00c8-4ec2-a3ea-c17c1426e1cc)
+
+
+
+
+
+
+
+
+
+
