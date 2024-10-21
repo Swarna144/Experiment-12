@@ -66,3 +66,198 @@ int main()
     s1.display();
 }
 ```
+
+12a
+```
+#include <iostream>
+using namespace std;
+
+//defining the constructor outside the class
+class student
+{
+    int rn;
+    char n[50];
+    float avg;
+    public:
+    student();
+    void display();
+};
+student::student()
+{
+    cout<<"Enter the name: ";
+    cin>>n;
+    cout<<"Enter the roll no.: ";
+    cin>>rn;
+    cout<<"Enter the average: ";
+    cin>>avg;
+}
+void student::display()
+{
+    cout<<endl;
+    cout<<"Name: "<<n<<endl;
+    cout<<"Roll No: "<<rn<<endl;
+    cout<<"Average: "<<avg<<endl;
+}
+int main()
+{
+    student s1;
+    s1.display();
+}
+```
+
+12b
+```
+#include <iostream>
+using namespace std;
+
+//types of constructor - default constructor
+class student
+{
+    int rn;
+    char n[50];
+    double m1, m2, m3;
+    public:
+    student()
+{
+    cout<<"Enter the name: ";
+    cin>>n;
+    cout<<"Enter the roll no.: ";
+    cin>>rn;
+    cout<<"Enter the subject 1 marks: ";
+    cin>>m1;
+    cout<<"Enter the subject 2 marks: ";
+    cin>>m2;
+    cout<<"Enter the subject 3 marks: ";
+    cin>>m3;
+}
+
+void display()
+{
+    cout<<endl;
+    cout<<"Name: "<<n<<endl;
+    cout<<"Roll No: "<<rn<<endl;
+    cout<<"Marks for subject 1: "<<m1<<endl;
+    cout<<"Marks for subject 2: "<<m2<<endl;
+    cout<<"Marks for subject 3: "<<m3<<endl;
+}
+};
+int main()
+{
+    student s1;
+    s1.display();
+}
+```
+
+12c
+```
+#include <iostream>
+using namespace std;
+
+//types of constructor - parameterized constructor
+class maxop
+{
+    public:
+    maxop(int a, int b)
+{
+    cout<<"First Number: "<<a<<endl;
+    cout<<"Second Number: "<<b<<endl;
+    cout<<endl;
+    if (a>b)
+    {
+        cout<<"The first number is greater than the second.";
+    }
+    else if (b>a)
+    {
+        cout<<"The second number is greater than the first. ";
+    }
+    else
+    {
+        cout<<"Both numbers are equal. ";
+    }
+}
+};
+
+int main()
+{
+    maxop n1(23,76);
+}
+```
+
+12d
+```
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+//types of constructors - copy constructor
+class student
+{
+    int rn;
+    char n[50];
+    float avg = 0;
+    public:
+    student(int,char[],float);
+
+    student(student &t)
+    {
+        rn=t.rn;
+        strcpy(n,t.n);
+        avg=t.avg;
+    }
+    void display();
+
+};
+
+ student::student(int rno,char na[],float av)
+ {
+    rn=rno;
+    strcpy(n,na);
+    avg=av;
+ }
+
+void student::display()
+ {
+    cout<<endl;
+    cout<<"Name: "<<n<<endl;
+    cout<<"Roll No: "<<rn<<endl;
+    cout<<"Average: "<<avg<<" %"<<endl;
+ }
+
+int main()
+{
+    student s1(36,"Lewis",93.7);
+    s1.display();
+
+    student lewis(s1);
+    lewis.display();
+
+    return 0;
+}
+```
+
+12e
+```
+# include<iostream>
+using namespace std;
+int c = 0;
+//using a destructor
+class destruct
+{
+    public:
+    destruct()
+    {
+        c++;
+        cout<<"Number of objects created: "<<c<<endl;
+    }
+    ~destruct()
+    {
+        c--;
+        cout<<"Number of objects destroyed: "<<c<<endl;
+    }
+};
+
+int main()
+{
+    destruct aa,bb,cc,dd;
+}
+```
